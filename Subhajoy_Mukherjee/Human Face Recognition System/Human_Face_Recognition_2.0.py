@@ -57,7 +57,7 @@ def update_image_dataset(ImageArray):
         
         
 #This part will take pictures from webcam in REALTIME
-cap=cv2.VideoCapture(0)
+cap=cv2.VideoCapture(r"C:\Users\subha\Documents\GitHub\Internwork\Subhajoy_Mukherjee\Human Face Recognition System\13839848-hd_1920_1080_30fps.mp4")
 cap.set(3,1080)
 cap.set(4,720)
 while (cap.isOpened()):
@@ -73,7 +73,7 @@ while (cap.isOpened()):
     #i=0
     face_in_frame=face_recognition.face_locations(img)
     for imgs,face_loc in zip(Frame_Images,face_in_frame):
-        df3=DeepFace.find(imgs,db_path=Dataset_path,enforce_detection=False,model_name='VGG-Face',threshold=0.90) 
+        df3=DeepFace.find(imgs,db_path=Dataset_path,enforce_detection=False,model_name='VGG-Face',threshold=0.85) 
         #Here in model_name=["Facenet512","Facenet","Dlib","VGG-Face","ArcFace","GhostFaceNet", "SFace","OpenFace", "DeepFace", "DeepID" ]
         #All the models are written in the decendeing order of their accuracy any and acsending order of their speed. 
         #According them 'VGG-Face' is suggested to use 

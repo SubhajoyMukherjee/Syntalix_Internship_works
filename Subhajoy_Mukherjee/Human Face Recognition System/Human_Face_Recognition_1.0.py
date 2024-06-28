@@ -78,7 +78,7 @@ Unique_ID=loading_IDs(Dataset_path)
 
 #training_face_encoding=training_images(Images)
 
-cap=cv2.VideoCapture(0)
+cap=cv2.VideoCapture("C:/Users/subha/Documents/GitHub/Internwork/Subhajoy_Mukherjee/Human Face Recognition System/2985409-uhd_3840_2160_24fps.mp4")
 cap.set(3,1000)
 cap.set(4,700)
 while (cap.isOpened()):
